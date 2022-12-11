@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="nl-NL">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="Freddy Meijer">
+  <meta http-equiv="content-language" content="nl-nl">
+  <meta name="description" content="BSN Checker in JavaScript">
+  <meta name="keywords" content="freddy,meijer,burger,servicenummer,check,javascript,elfproef">
+  <title>BSN checker</title>
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+  <script src="js/bsn_check.js" type="text/JavaScript"></script>
+  <noscript>Om deze website goed te kunnen gebruiken dient JavaScript geactiveerd te zijn.</noscript>
+</head>
+
+<body>
+
+  <header>
+    <h1>BSN CHECKER</h1>
+  </header>
+  <div class="checker">
+    <p>Welkom op deze website. Op deze pagina kunt u controleren of een bepaald nummer voldoet aan de 11-proef en of het
+      dus een geldig BSN is. Allereerst wordt uitgelegd hoe de 11-proef gedaan wordt. Hierna kunt u uw eigen getal
+      invoeren en kijken of het voldoet aan de 11-proef.</p>
+    <h2>De berekening</h2>
+    <p>
+      Wat is de elfproef eigenlijk? De elfproef is een rekenkundige methode die wordt uitgevoerd op een negen- of
+      tiencijferig nummer. In de berekening worden aan de afzondelijke getallen gewichten gekoppeld. Het getal en het
+      gewicht worden met elkaar vermenigdvuldigd en daarna bij de andere getallen opgeteld. Het totaal wordt gedeel door
+      11. Hier moet een geheel getal uitkomen (een integer). Tijd voor een voorbeeld. We gaan uit van het volgende
+      nummer: 415195895.
+    </p>
+    <div class="berekening">
+      x = ((9*4)+(8*1)+(7*5)+(6*1)+(5*9)+(4*5)+(3*8)+(2*9)+(-1*5))/11<br>
+      x = (36+8+35+6+45+20+24+18+-5)/11<br>
+      x = 187/11<br>
+      x = 17
+    </div>
+    <p>Uit bovenstaande berekening komt een geheel getal. Het nummer is dus een geldig BSN. Laten we de berekening eens
+      doen met een ander nummer: 987654321</p>
+    <div class="berekening">
+      x = ((9*9)+(8*8)+(7*7)+(6*6)+(5*5)+(4*4)+(3*3)+(2*2)+(-1*1))/11<br>
+      x = (81+64+49+36+25+16+9+4+-1)/11<br>
+      x = 283/11<br>
+      x = 25,72
+    </div>
+    <p>Uit bovenstaande berekening komt een gebroken getal (decimaal). Dit is dus geen geldig BSN.</p>
+    <h2>Doe de check</h2>
+    <p>Voer in onderstaand veld een nummer in van 9 cijfers lang. Klik hierna op de knop <em>Voer elfproef uit</em>.
+      Vervolgens verschijnt onder de knop of uw getal wel geen geldig BSN is. Wilt u vervolgens de check nogmaals
+      uitvoeren, klik dan op <em>Reset checker</em>. De velden worden geleegd en u kunt de check nogmaals doen.</p>
+    <form id="form_checker" action="index.html" method="POST">
+      <input id="nummer" type="number" maxlength="999999999" minlength="000000000"> <br><br>
+      <button type="button" name="knop" value="submit" onclick="bsn_check(nummer)">Voer elfproefuit</button>
+      <button type="button" name="reset" value="submit" onclick="leeg_formulier()">Reset checker</button>
+    </form>
+  </div>
+  <footer>
+    <p id="copyright">&#xA9; Freddy Meijer</p>
+  </footer>
+
+</body>
+
+</html>

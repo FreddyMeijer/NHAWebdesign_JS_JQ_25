@@ -1,0 +1,77 @@
+header {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #6f9cb3;
+}
+
+h1 {
+  color: #fddbc0;
+  padding-left: 10px;
+}
+
+h2 {
+  color: #fddbc0;
+  padding-left: 10px;
+}
+
+.checker {
+  min-height: 650px;
+  width: 50%;
+}
+
+p {
+  font-size: small;
+  padding-left: 10px;
+}
+
+footer {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+  background-color: #6f9cb3;
+  clear: both;
+}
+
+body {
+  font-family: Verdana;
+  background-color: rgb(253, 219, 192, 0.10) ;
+}
+
+form{
+  padding-left: 10px;
+}
+
+.berekening{
+  background-color: rgb(217,217,217);
+  color: black;
+  font-family:  Consolas,monaco,monospace;
+  margin: 10px;
+  font-size: small;
+  width: 50%;
+}
+
+#copyright {
+  display: block;
+  font-family: Verdana;
+  font-size: small;
+  color: #fddbc0;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+button {
+  background-color: #fddbc0;
+  border: none;
+  width: 110px;
+  height: 50px;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+button:active {
+  background-color: #6f9cb3;
+}
